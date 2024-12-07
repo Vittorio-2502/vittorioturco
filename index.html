@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito</title>
+    <title>Filosofia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,74 +11,88 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
-            line-height: 1.6;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             min-height: 100vh;
         }
+        .sidebar {
+            width: 200px;
+            background-color: #DDA0DD; /* Viola-rosino */
+            color: #000;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #000;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #F5E6F5; /* Colore più chiaro */
+            border: 2px solid #DDA0DD;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #e1d0e1;
+        }
+        .sidebar .active {
+            font-weight: bold;
+            background-color: #DDA0DD;
+            color: #FFF;
+        }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            margin-left: 220px; /* Lascia spazio per la sidebar */
             padding: 20px;
             flex: 1;
         }
-        .section {
-            margin-bottom: 30px;
-        }
         .rounded-border {
-            border: 4px solid #C7EAC3;
+            border: 4px solid #DDA0DD;
             border-radius: 15px;
             padding: 20px;
-            background-color: #ffffff;
-        }
-        .subject-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 25px;
-            font-size: 16px;
-            color: #000;
-            border: 4px solid #C7EAC3;
-            border-radius: 10px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            background-color: #EAF6E8;
-        }
-        .subject-button:hover {
-            background-color: #d8eed8;
+            background-color: #F5E6F5;
         }
         footer {
-            background-color: #C7EAC3;
+            background-color: #DDA0DD;
             color: #000;
             text-align: center;
             padding: 15px 0;
             font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Benvenuto!</h1>
-        <div class="section rounded-border">
-            <h2>Il nostro progetto</h2>
-            <p>
-                Il nostro progetto nasce dall'idea di rendere l'apprendimento accessibile a tutti. 
-                Attraverso contenuti chiari e strumenti innovativi, ci impegniamo a supportare studenti 
-                di ogni livello. Esplora le nostre risorse per scoprire un nuovo modo di imparare!
-            </p>
+    <div class="sidebar">
+        <a href="index.html" class="active">Home</a> <!-- Tasto Home -->
+        <a href="matematica.html">Matematica</a>
+        <a href="scienze.html">Scienze</a>
+        <a href="storia.html">Storia</a>
+        <a href="geografia.html">Geografia</a>
+        <a href="italiano.html">Italiano</a>
+        <a href="filosofia.html">Filosofia</a>
+        <!-- Sottotasti specifici per Filosofia -->
+        <div>
+            <a href="#introduzione">Introduzione</a>
+            <a href="#socrate">Socrate</a>
+            <a href="#plato">Platone</a>
         </div>
-        <div class="section">
-            <h2>Materie</h2>
-            <div class="rounded-border">
-                <a href="matematica.html" class="subject-button">Matematica</a>
-                <a href="scienze.html" class="subject-button">Scienze</a>
-                <a href="storia.html" class="subject-button">Storia</a>
-                <a href="geografia.html" class="subject-button">Geografia</a>
-                <a href="italiano.html" class="subject-button">Italiano</a>
-                <a href="filosofia.html" class="subject-button">Filosofia</a>
-            </div>
+    </div>
+    <div class="container">
+        <h1>Filosofia</h1>
+        <div class="rounded-border">
+            <h2 id="introduzione">Introduzione generale alla filosofia occidentale</h2>
+            <p>
+                La filosofia occidentale affonda le sue radici nell'antica Grecia, con pensatori come Socrate, 
+                Platone e Aristotele, che posero le basi per un'indagine razionale sulla natura della realtà, 
+                della conoscenza e della moralità. Attraverso i secoli, si è sviluppata in molteplici correnti 
+                di pensiero, esplorando temi fondamentali come il significato dell'esistenza, il ruolo della 
+                scienza e le questioni etiche che guidano la vita umana.
+            </p>
         </div>
     </div>
     <footer>
@@ -87,4 +101,3 @@
     </footer>
 </body>
 </html>
-
