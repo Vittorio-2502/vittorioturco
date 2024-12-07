@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Il mio sito</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,37 +11,20 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
-            display: flex;
-            min-height: 100vh;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #C7EAC3; /* Verde acqua */
-            color: #000;
-            padding: 20px;
+            line-height: 1.6;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            position: fixed;
-            height: 100%;
-        }
-        .sidebar a {
-            text-decoration: none;
-            color: #000;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #EAF6E8; /* Colore più chiaro */
-            border: 2px solid #C7EAC3;
-            border-radius: 5px;
-            text-align: center;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #d8eed8;
+            min-height: 100vh;
         }
         .container {
-            margin-left: 220px; /* Lascia spazio per la sidebar */
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             flex: 1;
+        }
+        .section {
+            margin-bottom: 30px;
         }
         .rounded-border {
             border: 4px solid #C7EAC3;
@@ -49,37 +32,53 @@
             padding: 20px;
             background-color: #ffffff;
         }
+        .subject-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: #000;
+            border: 4px solid #C7EAC3;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #EAF6E8;
+        }
+        .subject-button:hover {
+            background-color: #d8eed8;
+        }
         footer {
             background-color: #C7EAC3;
             color: #000;
             text-align: center;
             padding: 15px 0;
             font-size: 14px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <a href="index.html" class="active">Home</a>
-        <a href="matematica.html">Matematica</a>
-        <a href="scienze.html">Scienze</a>
-        <a href="storia.html">Storia</a>
-        <a href="geografia.html">Geografia</a>
-        <a href="italiano.html">Italiano</a>
-        <a href="filosofia.html">Filosofia</a>
-    </div>
     <div class="container">
         <h1>Benvenuto!</h1>
-        <div class="rounded-border">
+        <div class="section rounded-border">
             <h2>Il nostro progetto</h2>
             <p>
                 Il nostro progetto nasce dall'idea di rendere l'apprendimento accessibile a tutti. 
                 Attraverso contenuti chiari e strumenti innovativi, ci impegniamo a supportare studenti 
                 di ogni livello. Esplora le nostre risorse per scoprire un nuovo modo di imparare!
             </p>
+        </div>
+        <div class="section">
+            <h2>Materie</h2>
+            <div class="rounded-border">
+                <a href="matematica.html" class="subject-button">Matematica</a>
+                <a href="scienze.html" class="subject-button">Scienze</a>
+                <a href="storia.html" class="subject-button">Storia</a>
+                <a href="geografia.html" class="subject-button">Geografia</a>
+                <a href="italiano.html" class="subject-button">Italiano</a>
+                <a href="filosofia.html" class="subject-button">Filosofia</a>
+            </div>
         </div>
     </div>
     <footer>
@@ -88,4 +87,3 @@
     </footer>
 </body>
 </html>
-
